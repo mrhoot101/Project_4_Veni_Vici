@@ -6,7 +6,7 @@ import './App.css'
 const ACCESS_KEY = import.meta.env.VITE_APP_ACCESS_KEY;
 
 const App = () => {
-  let images = [
+  const images = [
     {
       key: 1,
       name: "Mochi",
@@ -331,10 +331,10 @@ const App = () => {
         <h2>Welcome to Dreaming with Dogs!</h2>
 
 
-        {/* {currentImage && <img src={currentImage} alt="Generated" />} */}
         <button onClick={() => {
           generateQuery();
         }}>Generate Image</button>
+
         <Dogs image={currentImage}
           attributes={images.find(img => img.url === image.url)?.attributes}
           handleAttributeClick={(attribute) => banList.includes(attribute) ? null : setBanList([...banList, attribute])} />
@@ -344,7 +344,7 @@ const App = () => {
         <h3>Banned Attributes</h3>
         <ul>
           {banList.map((quality, index) => (
-            <li key={index} onClick={() => banList.includes(quality) ? setBanList(banList.filter(q => q != quality)) : null}>{quality}</li>
+            <li key={index}  onClick={() => banList.includes(quality) ? setBanList(banList.filter(q => q != quality)) : null}>{quality}</li>
           ))}
         </ul>
       </div>

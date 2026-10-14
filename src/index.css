@@ -109,3 +109,13 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+.banned-qualities {
+  background-color: rgb(89, 89, 89);
+  margin-left: 20px;
+}
+
+ul {
+  list-style-type: none;
+
+}

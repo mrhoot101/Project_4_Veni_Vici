@@ -8,9 +8,9 @@ const Dogs = ({ image, attributes, handleAttributeClick }) => {
             <p>Here are some of our adorable dogs!</p>
 
             {attributes && (
-                <ul>
+                <ul >
                     {attributes.map((attribute, index) => (
-                        <li key={index} onClick={() => handleAttributeClick(attribute)}>{attribute}</li>
+                        <li key={index}  onClick={() => handleAttributeClick(attribute)}>{attribute}</li>
                     ))}
                 </ul>
             )}
