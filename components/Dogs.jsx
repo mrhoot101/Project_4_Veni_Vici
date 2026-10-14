@@ -1,5 +1,5 @@
 
-const Dogs = ({ image, qualities, name, handleQualityClick }) => {
+const Dogs = ({ image, attributes, handleAttributeClick }) => {
 
     return (
 
@@ -7,12 +7,10 @@ const Dogs = ({ image, qualities, name, handleQualityClick }) => {
             <h3>Our Dogs</h3>
             <p>Here are some of our adorable dogs!</p>
 
-            <h3>{name}</h3>
-
-            {qualities && (
+            {attributes && (
                 <ul>
-                    {qualities.map((quality, index) => (
-                        <li key={index} onClick={() => handleQualityClick(quality)}>{quality}</li>
+                    {attributes.map((attribute, index) => (
+                        <li key={index} onClick={() => handleAttributeClick(attribute)}>{attribute}</li>
                     ))}
                 </ul>
             )}
