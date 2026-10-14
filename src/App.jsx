@@ -334,7 +334,7 @@ const App = () => {
         <button onClick={() => {
           generateQuery();
         }}>Generate Image</button>
-
+        
         <Dogs image={currentImage}
           attributes={images.find(img => img.url === image.url)?.attributes}
           handleAttributeClick={(attribute) => banList.includes(attribute) ? null : setBanList([...banList, attribute])} />
@@ -344,7 +344,7 @@ const App = () => {
         <h3>Banned Attributes</h3>
         <ul>
           {banList.map((quality, index) => (
-            <li key={index}  onClick={() => banList.includes(quality) ? setBanList(banList.filter(q => q != quality)) : null}>{quality}</li>
+            <li key={index} onClick={() => banList.includes(quality) ? setBanList(banList.filter(q => q != quality)) : null}>{quality}</li>
           ))}
         </ul>
       </div>
